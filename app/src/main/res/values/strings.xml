@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Convert Rupiah to Dollar</string>
+    <string name="textViewJudul">Selamat Mengubah Rupiah ke Dollar</string>
+    <string name="textViewSatuanUkur">Convert Rupiah to Dollar</string>
+    <string name="inputanRupiah">Masukkan Jumlah Uang</string>
+    <string name="inputanRupiah2">Masukkan Jumlah Dollar</string>
+    <string name="buttonHitung">Rupiah to Dollar</string>
+    <string name="buttonHitung2">Dollar to Rupiah</string>
+    <string name="textViewHasil">Hasil Convert</string>
+    <string name="textHasil">0</string>
+</resources>
