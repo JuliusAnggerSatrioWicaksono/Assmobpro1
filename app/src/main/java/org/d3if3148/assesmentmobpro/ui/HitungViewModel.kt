@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import org.d3if3148.assesmentmobpro.model.HasilHitung
 
-class MainViewModel : ViewModel() {
+class HitungViewModel : ViewModel() {
     private val hasilHitung1 = MutableLiveData<HasilHitung>()
     private val hasilHitung2 = MutableLiveData<HasilHitung>()
 

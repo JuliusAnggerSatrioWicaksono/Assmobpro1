@@ -1,5 +1,6 @@
 package org.d3if3148.assesmentmobpro.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.*
@@ -13,8 +14,8 @@ import org.d3if3148.assesmentmobpro.model.HasilHitung
 
 class HitungFragment: Fragment() {
     private lateinit var binding: HitungFragmentBinding
-    private val viewModel: MainViewModel by lazy {
-        ViewModelProvider(requireActivity())[MainViewModel::class.java]
+    private val viewModel: HitungViewModel by lazy {
+        ViewModelProvider(requireActivity())[HitungViewModel::class.java]
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +31,9 @@ class HitungFragment: Fragment() {
 
         binding.buttonHitung2.setOnClickListener{ konversiDollar()}
             viewModel.getHasilCod2().observe(requireActivity(),{showResult2(it)})
+
+        binding.shareButton.setOnClickListener { shareData() }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -51,7 +55,6 @@ class HitungFragment: Fragment() {
             Toast.makeText(context, "Masukkan Jumlah Uang", Toast.LENGTH_SHORT).show()
             return
         }
-
 
         viewModel.konversiRupiah(
             input.toFloat()
@@ -78,6 +81,18 @@ class HitungFragment: Fragment() {
     private fun showResult2(result: HasilHitung?){
         if (result == null) return
         binding.textHasil.text = getString(R.string.hasil_y, result.hasil)
+    }
+
+    private fun shareData() {
+        val message = getString(R.string.bagikan_template,
+            binding.textHasil.text,
+        )
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
+        if (shareIntent.resolveActivity(
+                requireActivity().packageManager) != null) {
+            startActivity(shareIntent)
+        }
     }
 
 }

@@ -14,6 +14,6 @@
     <string name="courtesy">Aplikasi COD adalah aplikasi yang digunakan untuk mengkonversi nilai
     mata uang Rupiah ke Dollar atau nilai mata uang Dollar ke Rupiah</string>
     <string name="bagikan">Bagikan</string>
-    <string name="bagikan_template">Berat badan: %1$s kg\nTinggi badan: %2$s cm\nJenis kelamin: %3$s\n\n%4$s\n%5$s</string>
+    <string name="bagikan_template">Total: %1$s $</string>
 
 </resources>
