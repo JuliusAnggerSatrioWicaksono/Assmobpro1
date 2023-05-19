@@ -8,4 +8,12 @@
     <string name="buttonHitung2">Dollar to Rupiah</string>
     <string name="textViewHasil">Hasil Convert</string>
     <string name="textHasil">0</string>
+    <string name="hasil_x">Hasil: $ %1$.2f</string>
+    <string name="hasil_y">Hasil: Rp %1$.2f </string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="courtesy">Aplikasi COD adalah aplikasi yang digunakan untuk mengkonversi nilai
+    mata uang Rupiah ke Dollar atau nilai mata uang Dollar ke Rupiah</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="bagikan_template">Berat badan: %1$s kg\nTinggi badan: %2$s cm\nJenis kelamin: %3$s\n\n%4$s\n%5$s</string>
+
 </resources>
