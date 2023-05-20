@@ -3,17 +3,19 @@
     <string name="textViewJudul">Selamat Mengubah Rupiah ke Dollar</string>
     <string name="textViewSatuanUkur">Convert Rupiah to Dollar</string>
     <string name="inputanRupiah">Masukkan Jumlah Uang</string>
-    <string name="inputanRupiah2">Masukkan Jumlah Dollar</string>
     <string name="buttonHitung">Rupiah to Dollar</string>
-    <string name="buttonHitung2">Dollar to Rupiah</string>
     <string name="textViewHasil">Hasil Convert</string>
-    <string name="textHasil">0</string>
-    <string name="hasil_x">Hasil: $ %1$.2f</string>
-    <string name="hasil_y">Hasil: Rp %1$.2f </string>
+    <string name="hasil_x">Total: $ %1$.2f</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="courtesy">Aplikasi COD adalah aplikasi yang digunakan untuk mengkonversi nilai
     mata uang Rupiah ke Dollar atau nilai mata uang Dollar ke Rupiah</string>
     <string name="bagikan">Bagikan</string>
-    <string name="bagikan_template">Total: %1$s $</string>
+    <string name="belum_ada_data">Belum ada data</string>
+    <string name="histori">Histori</string>
+    <string name="hapus_histori">Hapus Histori</string>
+    <string name="hapus">Hapus</string>
+    <string name="batal">Batal</string>
+    <string name="konfirmasi_hapus">Hapus semua histori?</string>
+    <string name="bagikan_template"> %1$s</string>
 
 </resources>

@@ -10,6 +10,9 @@ interface CodDao {
     @Insert
     fun insert(cod: CodEntity)
 
-    @Query("SELECT * FROM cod ORDER BY id DESC LIMIT 1")
-    fun getLastCod(): LiveData<CodEntity?>
+    @Query("SELECT * FROM cod")
+    fun getLastCod(): LiveData<List<CodEntity>>
+
+    @Query("DELETE FROM cod")
+    fun clearData()
 }
