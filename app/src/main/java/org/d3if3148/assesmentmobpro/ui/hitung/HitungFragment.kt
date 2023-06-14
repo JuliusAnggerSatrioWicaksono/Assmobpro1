@@ -1,8 +1,10 @@
 package org.d3if3148.assesmentmobpro.ui.hitung
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.*
 import android.widget.Toast
@@ -23,6 +25,16 @@ class HitungFragment : Fragment() {
         ViewModelProvider(this, factory)[HitungViewModel::class.java]
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        Log.i("HitungFragment", "onAttach dijalankan")
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        Log.i("HitungFragment", "onCreate dijalankan")
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
         binding = HitungFragmentBinding.inflate(layoutInflater, container, false)
@@ -35,6 +47,41 @@ class HitungFragment : Fragment() {
         binding.shareButton.setOnClickListener {shareData()}
         binding.lihatKursbutton.setOnClickListener{lihatKurs()}
         viewModel.getHasilCod().observe(requireActivity(), {showResult(it)})
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("HitungFragment", "onStart dijalankan")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("HitungFragment", "onResume dijalankan")
+    }
+
+    override fun onPause() {
+        Log.i("HitungFragment", "onPause dijalankan")
+        super.onPause()
+    }
+
+    override fun onStop() {
+        Log.i("HitungFragment", "onStop dijalankan")
+        super.onStop()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Log.i("HitungFragment", "onDestroyView dijalankan")
+    }
+
+    override fun onDestroy() {
+        Log.i("HitungFragment", "onDestroy dijalankan")
+        super.onDestroy()
+    }
+
+    override fun onDetach() {
+        Log.i("HitungFragment", "onDetach dijalankan")
+        super.onDetach()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
