@@ -1,7 +1,0 @@
-[
-    { "Mata Uang" : "Euro", "Nilai" : "$1,08", "imageID" : "euro"},
-    { "Mata Uang" : "Poundsterling", "Nilai" : "$1,26", "imageID" : "pound"},
-    { "Mata Uang" : "Dinar Kuwait", "Nilai" : "$3,25", "imageID" : "kuwait"},
-    { "Mata Uang" : "Riyal", "Nilai" : "$0,27", "imageID" : "riyal"},
-    { "Mata Uang" : "Rupiah", "Nilai" : "$0,000067 Dolar", "imageID" : "rupiah"}
-]
