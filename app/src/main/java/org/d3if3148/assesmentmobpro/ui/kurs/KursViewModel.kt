@@ -6,12 +6,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.d3if3148.assesmentmobpro.data.DataCod
 import org.d3if3148.assesmentmobpro.network.CodApi
+import org.d3if3148.assesmentmobpro.network.UpdateWorker
 import java.util.concurrent.TimeUnit
 
 class KursViewModel : ViewModel() {
@@ -38,5 +40,14 @@ class KursViewModel : ViewModel() {
     fun getData(): LiveData<List<DataCod>> = data
 
     fun getStatus(): LiveData<CodApi.ApiStatus> = status
+
+    fun scheduleUpdater(app: Application) {
+        val request = OneTimeWorkRequestBuilder<UpdateWorker>()
+            .setInitialDelay(1, TimeUnit.MINUTES)
+            .build()
+        WorkManager.getInstance(app).enqueueUniqueWork( UpdateWorker.WORK_NAME,
+            ExistingWorkPolicy.REPLACE,
+            request
+        ) }
 
 }
