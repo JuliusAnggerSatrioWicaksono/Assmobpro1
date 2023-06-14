@@ -9,6 +9,11 @@ import androidx.navigation.ui.NavigationUI
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
+
+    companion object {
+        const val CHANNEL_ID = "Updater"
+        const val PERMISSION_REQUEST_CODE = 1
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

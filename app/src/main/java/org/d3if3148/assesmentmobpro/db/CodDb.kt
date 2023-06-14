@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [CodEntity::class], version = 1, exportSchema = false)
+@Database(entities = [CodEntity::class], version = 2, exportSchema = false)
 abstract class CodDb : RoomDatabase() {
     abstract val dao: CodDao
     companion object {

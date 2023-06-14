@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_hitungFragment_to_historiFragment"
             app:destination="@id/historiFragment" />
+        <action
+            android:id="@+id/action_hitungFragment_to_kursFragment"
+            app:destination="@id/kursFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -28,4 +31,12 @@
         android:name="org.d3if3148.assesmentmobpro.ui.histori.HistoriFragment"
         android:label="@string/histori"
         tools:layout="@layout/fragment_histori" />
+
+    <fragment
+        android:id="@+id/kursFragment"
+        android:name="org.d3if3148.assesmentmobpro.ui.kurs.KursFragment"
+        android:label="@string/lihat_kurs"
+        tools:layout="@layout/fragment_list_kurs" />
+
+
 </navigation>

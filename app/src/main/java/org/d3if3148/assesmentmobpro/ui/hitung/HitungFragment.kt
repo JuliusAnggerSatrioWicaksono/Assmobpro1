@@ -33,6 +33,7 @@ class HitungFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.buttonHitung.setOnClickListener {konversiRupiah()}
         binding.shareButton.setOnClickListener {shareData()}
+        binding.lihatKursbutton.setOnClickListener{lihatKurs()}
         viewModel.getHasilCod().observe(requireActivity(), {showResult(it)})
     }
 
@@ -83,4 +84,8 @@ class HitungFragment : Fragment() {
             startActivity(shareIntent)
         }
     }
-}
+
+    private fun lihatKurs() {
+            findNavController().navigate(R.id.action_hitungFragment_to_kursFragment)
+        }
+    }
